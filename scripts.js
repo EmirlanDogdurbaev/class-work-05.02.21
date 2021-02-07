@@ -82,9 +82,15 @@
 
 
 
-let btn = document.querySelector("button")
-btn.style.border = "none";
+// let btn = document.querySelector("button")
+// btn.addEventListener('click', function(){
+//    this.style.backgroundColor = "red"
+// }
+//  );
+
+
+let btn = document.querySelector(".ex1")
 btn.addEventListener('click', function(){
-   this.style.backgroundColor = "red"
-}
- );
+      this.style.backgroundColor = "red"
+   }
+    );
