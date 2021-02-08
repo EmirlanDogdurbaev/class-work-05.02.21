@@ -1,28 +1,56 @@
 let button = document.querySelector('button');
 let fullName = document.querySelector('#full-name');
+let dob = document.querySelector('#dob');
+let city = document.querySelector('#city');
+let form = document.querySelector('form');
 
-button.addEventListener('click', function(event) {
-    console.log(event);
-    event.preventDefault();
-});
+city.value = "karakol";
+// city.selectedIndex = 1;
+// city.options[1].selected = true;
 
-fullName.addEventListener('keydown', function(event) { // при нажатии на клавищу
-    if (event.key == 'я') {
-        event.preventDefault();
-    }
+// button.addEventListener('click', function(event) {
+//     let r = Math.random() * 255;
+//     let b = Math.random() * 255;
+//     let g = Math.random() * 255;
+
+//     let rgb = rgb( ${r}, ${g.toFixed(0)}, ${b.toFixed(0)});
+//     console.log(rgb);
+// });
+
+city.addEventListener('keydown', function(event) { // при нажатии на клавищу
+    console.log('keydown');
+    // if (event.code.match(/Key/) && !event.key.match(/[а-яА-Я]/)) {
+    //     event.preventDefault();
+    // }
+    // if (fullName.value.length > 30) {
+    //     event.preventDefault();
+    // }
 });
-fullName.addEventListener('input', function(event) { // при измении поля ввода
+city.addEventListener('input', function(event) { // при измении поля ввода
     console.log('input');
 });
-fullName.addEventListener('keyup', function(event) { // при отпускании клавищи
+city.addEventListener('keyup', function(event) { // при отпускании клавищи
     console.log('keyup');
 });
-fullName.addEventListener('change', function(event) { // при изменении поля (потеря фокуса)
+city.addEventListener('change', function(event) { // при изменении поля (потеря фокуса)
     console.log('change');
 });
-fullName.addEventListener('copy', function(event) { // при копировании
+city.addEventListener('copy', function(event) { // при копировании
     console.log(event);
 });
-fullName.addEventListener('paste', function(event) { // при вставке
+city.addEventListener('paste', function(event) { // при вставке
     console.log('paste');
+});
+city.addEventListener('cut', function(event) { // при вырезании
+    console.log('cut');
+});
+fullName.addEventListener('focus', function(event) { // при фокусе
+    console.log('focus');
+});
+fullName.addEventListener('blur', function(event) { // при потере фокуса
+    console.log('blur');
+});
+form.addEventListener('submit', function(event) { // при отправке формы
+    console.log('submit');
+    event.preventDefault();
 });
